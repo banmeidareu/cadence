@@ -1,0 +1,27 @@
+CREATE DATABASE cadence;
+
+CREATE TABLE patient_detail (
+id INT unsigned NOT NULL AUTO_INCREMENT,
+name VARCHAR(150) NOT NULL,
+mrn VARCHAR(150) NOT NULL UNIQUE KEY,
+lang VARCHAR(150) NOT NULL,
+addr VARCHAR(150) NOT NULL,
+phone_num VARCHAR(150) NOT NULL,
+gender CHAR(4) NOT NULL,
+age TINYINT(1) NOT NULL,
+avg_heart_bpm INT(4) NOT NULL,
+avg_bg_mgdl INT(4) NOT NULL,
+PRIMARY KEY (id));
+
+CREATE TABLE patient_diagnosis (
+id INT unsigned NOT NULL AUTO_INCREMENT,
+mrn VARCHAR(150) NOT NULL UNIQUE KEY,
+diagnosis VARCHAR(150) NOT NULL,
+PRIMARY KEY (id));
+
+/* loads data mock data */
+load data local infile 'mock_data.csv' into table patient_detail fields terminated by ','
+enclosed by '"'
+lines terminated by '\n'
+IGNORE 1 LINES
+(name, mrn, lang, addr, phone_num, gender, age, avg_heart_bpm, avg_bg_mgdl);
