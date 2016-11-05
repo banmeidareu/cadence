@@ -1,6 +1,6 @@
 var reader = new FileReader();
 
-reader.readAsText('sample file location');
+reader.readAsText('http://cadencecares.me/tts_in');
 
 
 say(text);
