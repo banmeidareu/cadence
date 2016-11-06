@@ -25,4 +25,8 @@ function processData(allText) {
         }
     }
     // alert(lines);
+
+    for (var i = 0; i < allTextLines.length; i += 10) {
+        console.log(lines[i]);
+    }
 }
