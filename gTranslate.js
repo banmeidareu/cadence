@@ -1,7 +1,3 @@
-/* Integrating TROPO API
-var tropowebapi = require('tropo-webapi');
-*/
-
 //Integrating GOOGLE TRANSLATE API
 var googleTranslate = require('google-translate')("AIzaSyAmL_0KKXcnDJKTosRC_3hD5t-GWfiVzAU");
 
